@@ -1,156 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1.1 (Python 3.11.4 on win32)" generated="2024-10-22T12:26:48.688976" rpa="false" schemaversion="5">
-<suite id="s1" name="Demo8 Table Suite" source="c:\Mine\Company\Konsberg\RobotProject\selenium_suite\demo8_table_suite.robot">
-<test id="s1-t1" name="TC3 Print names" line="30">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-10-22T12:26:50.249714" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
-<arg>browser=chrome</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-10-22T12:26:50.246855" elapsed="1.975326"/>
+<robot generator="Robot 7.1.1 (Python 3.11.4 on win32)" generated="2024-10-23T06:08:46.312981" rpa="false" schemaversion="5">
+<suite id="s1" name="Demo3 Suite" source="c:\Mine\Company\Konsberg\RobotProject\robot_suite\demo3_suite.robot">
+<test id="s1-t1" name="TC3" line="12">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-10-23T06:08:46.363264" level="INFO">C:\Users\BALAJI~1\AppData\Local\Temp</msg>
+<arg>${TEMPDIR}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-10-23T06:08:46.363264" elapsed="0.001976"/>
 </kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-10-22T12:26:52.225698" elapsed="0.036935"/>
+<kw name="List Files In Directory" owner="OperatingSystem">
+<msg time="2024-10-23T06:08:46.365240" level="INFO" html="true">Listing contents of directory '&lt;a href="file://C:\Users\BALAJI~1\AppData\Local\Temp"&gt;C:\Users\BALAJI~1\AppData\Local\Temp&lt;/a&gt;'.</msg>
+<msg time="2024-10-23T06:08:46.365240" level="INFO">28 files:
+dd_BackgroundDownload_20241018063751.log
+dd_BackgroundDownload_20241018063751_result_Success.log
+dd_BackgroundDownload_20241019145341.log
+dd_BackgroundDownload_20241019145341_result_Error.log
+dd_BackgroundDownload_20241019152755.log
+dd_BackgroundDownload_20241019152755_result_Error.log
+dd_BackgroundDownload_20241021055956.log
+dd_BackgroundDownload_20241021055956_result_Error.log
+dd_BackgroundDownload_20241021064927.log
+dd_BackgroundDownload_20241021064927_result_Error.log
+dd_BackgroundDownload_20241021082027.log
+dd_BackgroundDownload_20241021082027_result_Error.log
+dd_BackgroundDownload_20241021083823.log
+dd_BackgroundDownload_20241021123101.log
+dd_BackgroundDownload_20241021123101_result_Error.log
+dd_BackgroundDownload_20241021125141.log
+dd_BackgroundDownload_20241022050223.log
+dd_BackgroundDownload_20241022050223_result_Error.log
+dd_BackgroundDownload_20241022061711.log
+dd_BackgroundDownload_20241022061711_result_Error.log
+dd_BackgroundDownload_20241022062644.log
+dd_BackgroundDownload_20241022084211.log
+dd_BackgroundDownload_20241022084211_result_Error.log
+dd_BackgroundDownload_20241022091344.log
+dd_BackgroundDownload_20241022091344_result_Error.log
+dd_BackgroundDownload_20241022092407.log
+dd_BackgroundDownload_20241022100258.log
+dd_BackgroundDownload_20241022100258_result_Error.log</msg>
+<msg time="2024-10-23T06:08:46.365240" level="INFO">@{files} = [ dd_BackgroundDownload_20241018063751.log | dd_BackgroundDownload_20241018063751_result_Success.log | dd_BackgroundDownload_20241019145341.log | dd_BackgroundDownload_20241019145341_result_Error.log ...</msg>
+<var>@{files}</var>
+<arg>path=${TEMPDIR}</arg>
+<arg>pattern=dd_Back*</arg>
+<doc>Wrapper for `List Directory` that returns only files.</doc>
+<status status="PASS" start="2024-10-23T06:08:46.365240" elapsed="0.000000"/>
 </kw>
-<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
-<arg>20s</arg>
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" start="2024-10-22T12:26:52.267717" elapsed="0.010373"/>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-10-23T06:08:46.365240" level="INFO">['dd_BackgroundDownload_20241018063751.log', 'dd_BackgroundDownload_20241018063751_result_Success.log', 'dd_BackgroundDownload_20241019145341.log', 'dd_BackgroundDownload_20241019145341_result_Error.log', 'dd_BackgroundDownload_20241019152755.log', 'dd_BackgroundDownload_20241019152755_result_Error.log', 'dd_BackgroundDownload_20241021055956.log', 'dd_BackgroundDownload_20241021055956_result_Error.log', 'dd_BackgroundDownload_20241021064927.log', 'dd_BackgroundDownload_20241021064927_result_Error.log', 'dd_BackgroundDownload_20241021082027.log', 'dd_BackgroundDownload_20241021082027_result_Error.log', 'dd_BackgroundDownload_20241021083823.log', 'dd_BackgroundDownload_20241021123101.log', 'dd_BackgroundDownload_20241021123101_result_Error.log', 'dd_BackgroundDownload_20241021125141.log', 'dd_BackgroundDownload_20241022050223.log', 'dd_BackgroundDownload_20241022050223_result_Error.log', 'dd_BackgroundDownload_20241022061711.log', 'dd_BackgroundDownload_20241022061711_result_Error.log', 'dd_BackgroundDownload_20241022062644.log', 'dd_BackgroundDownload_20241022084211.log', 'dd_BackgroundDownload_20241022084211_result_Error.log', 'dd_BackgroundDownload_20241022091344.log', 'dd_BackgroundDownload_20241022091344_result_Error.log', 'dd_BackgroundDownload_20241022092407.log', 'dd_BackgroundDownload_20241022100258.log', 'dd_BackgroundDownload_20241022100258_result_Error.log']</msg>
+<arg>${files}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-10-23T06:08:46.365240" elapsed="0.000000"/>
 </kw>
-<kw name="Go To" owner="SeleniumLibrary">
-<msg time="2024-10-22T12:26:52.278090" level="INFO">Opening url 'https://datatables.net/extensions/select/examples/checkbox/checkbox.html'</msg>
-<arg>url=https://datatables.net/extensions/select/examples/checkbox/checkbox.html</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2024-10-22T12:26:52.278090" elapsed="4.515345"/>
-</kw>
-<kw name="Get Element Count" owner="SeleniumLibrary">
-<msg time="2024-10-22T12:27:05.925873" level="INFO">${row_count} = 7</msg>
-<var>${row_count}</var>
-<arg>xpath=//table[@id='example']/tbody/tr</arg>
-<doc>Returns the number of elements matching ``locator``.</doc>
-<status status="PASS" start="2024-10-22T12:26:56.793435" elapsed="9.135394"/>
-</kw>
-<for flavor="IN RANGE">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2024-10-22T12:27:08.963970" level="INFO">${name} = Tiger Nixon</msg>
-<var>${name}</var>
-<arg>xpath=//table[@id='example']/tbody/tr[${i}]/td[2]</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-22T12:27:08.872798" elapsed="0.091172"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${name}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-10-22T12:27:08.963970" elapsed="0.000000"/>
-</kw>
-<var name="${i}">1</var>
-<status status="PASS" start="2024-10-22T12:27:08.860156" elapsed="0.111805"/>
-</iter>
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2024-10-22T12:27:09.023323" level="INFO">${name} = Timothy Mooney</msg>
-<var>${name}</var>
-<arg>xpath=//table[@id='example']/tbody/tr[${i}]/td[2]</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-22T12:27:08.975901" elapsed="0.047422"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${name}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-10-22T12:27:09.023323" elapsed="0.000000"/>
-</kw>
-<var name="${i}">2</var>
-<status status="PASS" start="2024-10-22T12:27:08.975901" elapsed="0.063307"/>
-</iter>
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2024-10-22T12:27:09.088679" level="INFO">${name} = Unity Butler</msg>
-<var>${name}</var>
-<arg>xpath=//table[@id='example']/tbody/tr[${i}]/td[2]</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-22T12:27:09.044928" elapsed="0.043751"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${name}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-10-22T12:27:09.088679" elapsed="0.000000"/>
-</kw>
-<var name="${i}">3</var>
-<status status="PASS" start="2024-10-22T12:27:09.042919" elapsed="0.045760"/>
-</iter>
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2024-10-22T12:27:09.197255" level="INFO">${name} = Vivian Harrell</msg>
-<var>${name}</var>
-<arg>xpath=//table[@id='example']/tbody/tr[${i}]/td[2]</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-22T12:27:09.096674" elapsed="0.109573"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${name}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-10-22T12:27:09.206247" elapsed="0.000000"/>
-</kw>
-<var name="${i}">4</var>
-<status status="PASS" start="2024-10-22T12:27:09.096674" elapsed="0.117570"/>
-</iter>
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2024-10-22T12:27:09.313768" level="INFO">${name} = Yuri Berry</msg>
-<var>${name}</var>
-<arg>xpath=//table[@id='example']/tbody/tr[${i}]/td[2]</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-22T12:27:09.224807" elapsed="0.088961"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${name}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-10-22T12:27:09.313768" elapsed="0.015632"/>
-</kw>
-<var name="${i}">5</var>
-<status status="PASS" start="2024-10-22T12:27:09.222239" elapsed="0.107161"/>
-</iter>
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2024-10-22T12:27:09.459313" level="INFO">${name} = Zenaida Frank</msg>
-<var>${name}</var>
-<arg>xpath=//table[@id='example']/tbody/tr[${i}]/td[2]</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-22T12:27:09.342921" elapsed="0.116392"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${name}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-10-22T12:27:09.459313" elapsed="0.000000"/>
-</kw>
-<var name="${i}">6</var>
-<status status="PASS" start="2024-10-22T12:27:09.329400" elapsed="0.129913"/>
-</iter>
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2024-10-22T12:27:09.493725" level="INFO">${name} = Zorita Serrano</msg>
-<var>${name}</var>
-<arg>xpath=//table[@id='example']/tbody/tr[${i}]/td[2]</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-22T12:27:09.467312" elapsed="0.026413"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${name}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-10-22T12:27:09.505236" elapsed="0.000000"/>
-</kw>
-<var name="${i}">7</var>
-<status status="PASS" start="2024-10-22T12:27:09.467312" elapsed="0.042441"/>
-</iter>
-<var>${i}</var>
-<value>1</value>
-<value>${row_count}+1</value>
-<status status="PASS" start="2024-10-22T12:27:05.929621" elapsed="3.580132"/>
-</for>
-<status status="PASS" start="2024-10-22T12:26:50.238858" elapsed="19.270895"/>
+<status status="PASS" start="2024-10-23T06:08:46.349419" elapsed="0.015821"/>
 </test>
-<status status="PASS" start="2024-10-22T12:26:48.708607" elapsed="20.805764"/>
+<status status="PASS" start="2024-10-23T06:08:46.318361" elapsed="0.046879"/>
 </suite>
 <statistics>
 <total>
@@ -159,7 +63,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Demo8 Table Suite">Demo8 Table Suite</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Demo3 Suite">Demo3 Suite</stat>
 </suite>
 </statistics>
 <errors>
