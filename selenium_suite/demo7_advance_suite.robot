@@ -67,7 +67,11 @@ TC5
 
     ${output}    Execute Javascript    return document.querySelector("#book-flight input[name='dateDeparture']").value
     Log To Console    ${output}
-    
+
+
+    #assign id and then use in js
+    Assign Id To Element    xpath=//div[@id='book-flight']//input[@name='dateReturn']    mine_work
+    Execute Javascript    document.querySelector("#mine_work").value='29 Oct 2024'
     Sleep    5s
     
 

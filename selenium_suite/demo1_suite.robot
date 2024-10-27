@@ -1,8 +1,11 @@
 *** Settings ***
 Library    SeleniumLibrary
 
+Test Tags    smoke
+
 *** Test Cases ***
 TC1
+    [Tags]    login
     Open Browser    url=https://www.facebook.com/    browser=chrome
     ${actual_title}    Get Title
     Log To Console    ${actual_title}

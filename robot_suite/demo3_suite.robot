@@ -1,5 +1,9 @@
 *** Settings ***
 Library    OperatingSystem
+Variables    demo.py
+Library    demo.py
+Library    SeleniumLibrary
+
 
 
 *** Test Cases ***
@@ -13,6 +17,19 @@ TC3
     Log    ${TEMPDIR}
     @{files}    List Files In Directory    path=${TEMPDIR}      pattern=dd_Back*  
     Log    ${files}
-    
     #print all file name that contains "python"
 
+TC4
+    Log To Console    ${username_locator}
+    Log To Console    ${password_locator}
+    ${out}    Say Hello 
+    Log    ${out}
+    
+TC5
+    TRY
+        Click Element    xpath=//*
+    EXCEPT  AS     ${error}
+        Log    ${error}      Error
+    FINALLY
+        Close Browser
+    END
